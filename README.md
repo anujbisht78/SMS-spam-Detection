@@ -12,7 +12,7 @@ SMS spam detection is a process used to identify and filter out unsolicited or u
 - [Problem Statement](#problem-statement)
 - [Data Collection](#data-preprocessing)
 - [Data Preprocessing](#data-preprocessing)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
 - [Feature Engineering](#feature-engineering)
 - [Model Building with Naive Bayes](#model-building-with-naive-bayes)
 - [Flask Integration](#flask-integration)
