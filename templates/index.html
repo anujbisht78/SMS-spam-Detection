@@ -57,35 +57,47 @@
         button:hover {
             background-color: #0056b3; /* Darker blue color on hover */
         }
+
+        /* Styles for result */
+        .result {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+
+        .result h2 {
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>SMS Spam Detection</h1>
-        <form method="post" onsubmit="return validateMessage()">
+        <form id="smsForm">
             <label for="message">Enter the message:</label><br>
             <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
             <button type="submit">Predict</button>
         </form>
-        <div class="result" style="display: none;">
-            <h2 id="prediction">{{ prediction }}</h2>
+        <div class="result" id="resultDiv">
+            <h2 id="prediction"></h2>
         </div>
     </div>
     <script>
-        function validateMessage() {
-            const message = document.querySelector('#message').value;
+        document.getElementById('smsForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const message = document.getElementById('message').value;
             if (message.trim().length === 0) {
                 alert('Please enter a message.');
-                return false;
+                return;
             }
-            return true;
-        }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const prediction = document.querySelector('#prediction').textContent;
-            if (prediction.trim().length !== 0) {
-                document.querySelector('.result').style.display = 'block';
-            }
+            // Simulate prediction (replace this with actual prediction logic)
+            const prediction = Math.random() < 0.5 ? '0' : '1'; // Randomly generate '0' or '1'
+
+            // Display the prediction result
+            const predictionText = prediction === '1' ? 'Spam' : 'Not Spam';
+            document.getElementById('prediction').innerText = predictionText;
+            document.getElementById('resultDiv').style.display = 'block';
         });
     </script>
 </body>
