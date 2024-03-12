@@ -4,101 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMS Spam Detection</title>
-    <style>
-        /* Styles for the body */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text color */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100vh; /* Full viewport height */
-        }
-
-        /* Styles for the form */
-        form {
-            max-width: 600px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1); /* White background with opacity */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* White shadow effect */
-        }
-
-        /* Styles for labels */
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold; /* Make labels bold */
-        }
-
-        /* Styles for textarea */
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #fff; /* White border */
-            border-radius: 5px;
-            resize: vertical;
-        }
-
-        /* Styles for buttons */
-        button {
-            background-color: #007bff; /* Blue button background */
-            color: #fff; /* White text color */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
-
-        button:hover {
-            background-color: #0056b3; /* Darker blue color on hover */
-        }
-
-        /* Styles for result */
-        .result {
-            display: none; /* Initially hidden */
-            margin-top: 20px;
-        }
-
-        .result h2 {
-            font-size: 24px;
-        }
-    </style>
+    <link rel="stylesheet" href="static\style.css">
 </head>
 <body>
     <div class="container">
         <h1>SMS Spam Detection</h1>
-        <form id="smsForm">
+        <form method="post">
             <label for="message">Enter the message:</label><br>
             <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
             <button type="submit">Predict</button>
         </form>
-        <div class="result" id="resultDiv">
-            <h2 id="prediction"></h2>
+        <div class="result" style="display: none;">
+            <h2 id="prediction">{{ prediction }}</h2>
         </div>
     </div>
-    <script>
-        document.getElementById('smsForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-
-            const message = document.getElementById('message').value;
-            if (message.trim().length === 0) {
-                alert('Please enter a message.');
-                return;
-            }
-
-            // Simulate prediction (replace this with actual prediction logic)
-            const prediction = Math.random() < 0.5 ? '0' : '1'; // Randomly generate '0' or '1'
-
-            // Display the prediction result
-            const predictionText = prediction === '1' ? 'Spam' : 'Not Spam';
-            document.getElementById('prediction').innerText = predictionText;
-            document.getElementById('resultDiv').style.display = 'block';
-        });
-    </script>
+    <script src="static\script.js"></script>
 </body>
 </html>
