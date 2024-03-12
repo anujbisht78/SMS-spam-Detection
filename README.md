@@ -4,7 +4,7 @@ SMS spam detection is a process used to identify and filter out unsolicited or u
 
 ### Working: [Link](https://www.linkedin.com/posts/anujbisht78_machinelearning-datascience-nltk-activity-7173168627888709632-2OIw?utm_source=share&utm_medium=member_android)
 ## Layout:
-<img width="450px;" src="https://github.com/anujbisht78/SMS-spam-Detection/blob/main/raw/SMS.jpg"/>
+<img width="800px;" src="https://github.com/anujbisht78/SMS-spam-Detection/blob/main/raw/SMS.jpg"/>
 
 
 ## Table of Contents
