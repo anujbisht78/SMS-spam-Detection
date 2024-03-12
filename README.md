@@ -1,41 +1,68 @@
 # SMS-spam Detection
-Flappy Bird is a classic side-scrolling mobile game where the player controls a bird, guiding it through a series of obstacles made up of pipes. The objective is to navigate the bird through the gaps between the pipes without touching them. The bird automatically moves forward, and the player can make it flap its wings to gain altitude and avoid crashing into the pipes. The game is known for its simple mechanics, addictive gameplay, and challenging difficulty. Players aim to achieve the highest score possible by flying through as many pipes as they can without colliding.
+
+SMS spam detection is a process used to identify and filter out unsolicited or unwanted text messages sent to mobile phones. It involves analyzing the content and characteristics of text messages to determine whether they are spam or legitimate messages. Techniques such as machine learning algorithms, natural language processing (NLP), and pattern recognition are commonly used to automatically classify incoming messages as spam or not spam based on features such as keywords, message length, sender information, and frequency of messages. SMS spam detection helps users protect their privacy, prevent fraudulent activities, and maintain the security of their mobile devices.
 
 ### Working: [Link](https://www.linkedin.com/posts/anujbisht78_machinelearning-datascience-nltk-activity-7173168627888709632-2OIw?utm_source=share&utm_medium=member_android)
-## Some Images:
-<img width="450px;" src="https://i.im.ge/2024/03/12/RasIzX.SMS.jpg"/>
+## Layout:
+<img width="450px;" src="https://github.com/anujbisht78/SMS-spam-Detection/blob/main/raw/SMS.jpg"/>
 
 
 ## Table of Contents
-- [Import Statements](#import-statements)
-- [Global Variables](#global-variables)
-- [Main Function](#main-function)
-- [Welcome Screen Function](#welcome-screen-function)
-- [Main Game Function](#main-game-function)
-- [isCollide Function](#iscollide-function)
-- [getRandomPipe Function](#getrandompipe-function)
-- [run_game Function](#run-game-function)
+- [Introduction](#introduction)
+- [Problem Statement](#problem-statement)
+- [Data Collection](#data-preprocessing)
+- [Data Preprocessing](#data-preprocessing)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Feature Engineering](#feature-engineering)
+- [Model Building with Naive Bayes](#model-building-with-naive-bayes)
+- [Flask Integration](#flask-integration)
+- [Frontend Development](#frontend-development)
+- [Model Evaluation](#model-evaluation)
+- [Deployment](#deployment)
+- [Conclusion](#conclusion)
 
-## Import Statements
-- Imports necessary modules and libraries for the game, including random, sys, pygame, and asyncio.
+## Introduction
+- Overview of SMS spam detection.
+- Importance of detecting spam messages in SMS communication.
   
-## Global Variables
-- Defines global variables used in the game, such as frame rate, screen width and height, game sprites, game sounds, and file paths for various resources.
+## Problem Statement
+- Description of the problem to be addressed by SMS spam detection.
+- Impact of spam messages on users and network resources.
 
-## Main Function
-- Defines the main coroutine function of the game using asyncio. Initializes Pygame, sets the game's window caption, loads game sprites and sounds, and runs the welcome screen and main game loop asynchronously.
+## Data Collection
+- Methods and sources for collecting SMS data.
+- Description of the dataset's characteristics and size.
 
-## Welcome Screen Function
-- Displays the welcome screen to the user and waits for a key press to start the game. It shows the game logo, player character, message, and base.
+## Data Preprocessing
+- Techniques for cleaning and preparing SMS data for analysis.
+- Tokenization, stop words removal, stemming, and vectorization using Python and NLTK.
 
-## Main Game Function
-- Contains the main game loop. Handles user input, updates game state, detects collisions, calculates score, and blits game sprites to the screen. This function controls the flow of the game.
+## Exploratory Data Analysis (EDA)
+- Analysis of the SMS dataset using Python libraries like pandas and matplotlib.
+- Visualization and statistical summaries to understand data distribution and patterns.
 
-## isCollide Function
-- Checks for collisions between the player character and the pipes or ground. It returns True if a collision is detected, indicating the end of the game.
+## Feature Engineering
+- Selection and transformation of features from SMS data for machine learning.
+- Utilizing Python and NLTK for feature extraction and engineering.
 
-## getRandomPipe Function
-- Generates positions for two pipes (one upper and one lower) to be displayed on the screen. The pipes are randomly positioned within the screen boundaries.
+## Model Building with Naive Bayes
+- Explanation of Naive Bayes algorithm for SMS spam detection.
+- Implementation of Naive Bayes classifier using Python's scikit-learn library.
 
-## run_game Function
-- Calls the main() coroutine function using asyncio.run() to start the game.
+## Flask Integration
+- Deployment of the trained model using Flask framework.
+- Creation of endpoints for receiving SMS messages and returning predictions.
+
+## Frontend Development
+- Design and development of user interface using HTML, CSS, and JavaScript.
+- Creation of forms for users to input SMS messages and display prediction results.
+
+## Model Evaluation
+- Evaluation of Naive Bayes model's performance using metrics like accuracy, precision, and recall.
+  
+## Deployment
+- Deployment of the integrated system for real-time SMS spam detection.
+- Considerations for scalability and maintenance.
+  
+## Conclusion
+- Summary of key findings and future directions for improving the SMS spam detection system.
